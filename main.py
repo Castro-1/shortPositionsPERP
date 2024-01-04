@@ -27,7 +27,7 @@ def main():
 
         # Check if the exchanged position size is negative, then check if exchanged position notional
         # is greater than $10,000 or the position size after greater than $10,000 SHORT
-        if exchanged_position_size < 0 and abs(exchanged_position_notional) > 0:
+        if exchanged_position_size < 0 and abs(exchanged_position_notional) > 10000:
 
             # Find the most important trades
             max_position_notional = max(exchanged_position_notional, max_position_notional)
